@@ -1,7 +1,13 @@
+import sys
+
+from PyQt5.QtWidgets import QApplication
+
 from controller.MainController import MainController
 from model.project.ProjectRep import ProjectRepository
 from model.project.ProjectService import ProjectService
 from model.project.Project import Project
+from view.window import VideoEditorUI
+
 
 class Platform:
     def __init__(self):
@@ -40,15 +46,10 @@ class Platform:
         self.project_service.update_current_project_effects([f"{choice} : {kwargs_str}"])
         self.project_service.save_current_project()
 
-    def run(self):
-        self.create_project("hu45678")
-
-        self.apply_effect("slow_motion", speed_factor=5)
-        projects = self.project_service.list_projects()
-        print(projects)
-
-
 
 if __name__ == '__main__':
+    app = QApplication(sys.argv)
     platform = Platform()
-    platform.run()
+    ui = VideoEditorUI(platform)
+    ui.show()
+    sys.exit(app.exec_())

@@ -2,30 +2,59 @@ import json
 import os
 from datetime import datetime
 from typing import List
-
+from abc import ABC, abstractmethod
 from config import DB_PATH
 from model.project.Project import Project
 
 
-# Helper functions
 def datetime_to_str(dt: datetime) -> str:
-    """Converts a datetime object to an ISO 8601 string."""
     return dt.isoformat() if dt else None
 
-
 def str_to_datetime(dt_str: str) -> datetime:
-    """Converts an ISO 8601 string to a datetime object."""
     return datetime.fromisoformat(dt_str) if dt_str else None
 
 
-class ProjectRepository:
+class IProjectRepository(ABC):
+
+    @abstractmethod
+    def load_projects(self):
+        """Load projects from the repository."""
+        pass
+
+    @abstractmethod
+    def save_projects(self, projects: List['Project']):
+        """Save a list of Project objects to the repository."""
+        pass
+
+    @abstractmethod
+    def add_project(self, project: 'Project'):
+        """Add a new Project to the repository."""
+        pass
+
+    @abstractmethod
+    def delete_project(self, project_name: str):
+        """Delete a Project by name from the repository."""
+        pass
+
+    @abstractmethod
+    def get_project(self, project_name: str):
+        """Retrieve a Project by name from the repository."""
+        pass
+
+    @abstractmethod
+    def update_project(self, updated_project: 'Project'):
+        """Update an existing Project in the repository."""
+        pass
+
+
+class ProjectRepository(IProjectRepository):
     def __init__(self, db_file=DB_PATH):
         self.db_file = db_file
         if not os.path.exists(self.db_file):
             with open(self.db_file, "w") as db:
                 json.dump([], db)
 
-    def load_projects(self) -> List['Project']:
+    def load_projects(self):
         try:
             with open(self.db_file, "r") as db:
                 data = json.load(db)  # Attempt to load JSON data
@@ -78,7 +107,7 @@ class ProjectRepository:
         projects = [proj for proj in self.load_projects() if proj.name != project_name]
         self.save_projects(projects)
 
-    def get_project(self, project_name: str) -> 'Project':
+    def get_project(self, project_name: str):
         """
         Retrieves a Project by name from the repository.
         Returns None if no project with the given name exists.

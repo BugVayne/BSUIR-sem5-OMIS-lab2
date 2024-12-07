@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33dd406-776f-4f76-b9fe-beb23e961548" name="Changes" comment="controller complete">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OIIS/OIIS.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform.py" beforeDir="false" afterPath="$PROJECT_DIR$/Platform.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MainController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/VideoplaybackController/VideoPlaybackController.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/temp_files/audio.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/temp_files/concated.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/temp_files/smth.mov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/temp_files/temple.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/temp_files/video.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/project/ProjectRep.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/project/ProjectRep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/project/ProjectService.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/project/ProjectService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/projects_db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StatOIV/lab4/lab4.1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../StatOIV/lab4/lab4.1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StatOIV/lab4/output_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../StatOIV/lab4/output_file.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StatOIV/lab5/output.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../StatOIV/lab5/output.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +270,8 @@
       <workItem from="1732959892474" duration="2577000" />
       <workItem from="1732963293275" duration="2657000" />
       <workItem from="1732986465438" duration="794000" />
-      <workItem from="1732987676719" duration="2846000" />
+      <workItem from="1732987676719" duration="5211000" />
+      <workItem from="1733552135525" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="controller complete">
       <option name="closed" value="true" />
